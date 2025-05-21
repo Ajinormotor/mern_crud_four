@@ -75,6 +75,7 @@ const handleUpdateToggle = (info) => {
                  <Update   setShowUpdate={setShowUpdate}  singleUser={singleUser} /> 
                 </div> }
 
+<h1 className='font-semibold text-xl text-center'>Seamfix Backend Student List </h1>
 
         <div className='md:max-w-[900px] w-full'>
       
