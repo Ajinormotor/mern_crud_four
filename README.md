@@ -1,19 +1,45 @@
-<h1>MERN CRUD Application </h1>
-Overview
-This project is a simple MERN stack (MongoDB, Express, React, Node.js) application demonstrating basic CRUD operations:
+# MERN CRUD Application
 
-Create new data entries
-Read and display data from the database
-Update existing data
-Delete data entries
-The backend uses Express and MongoDB with Mongoose for data modeling. The frontend is built with React.
+A full-stack MERN (MongoDB, Express, React, Node.js) CRUD app deployed on Render.
 
-<h1>Features </h1>
--User-friendly interface to manage data
--RESTful API backend
--Axios for HTTP requests
--Zustand (or Redux) for state management (optional)
--Error handling and notifications
--Support for async operations
+## 🔗 Live Demo
 
-you can visit the live link: https://mern-crud-four.onrender.com
+[View Deployed App](https://mern-crud-four.onrender.com)
+
+## 🚀 Features
+
+- Create, Read, Update, Delete (CRUD) operations
+- React frontend with Vite
+- Express backend with MongoDB
+- RESTful API
+- Toast notifications for actions
+- Responsive design
+- Deployed using Render
+
+## 🧰 Tech Stack
+
+- **Frontend:** React, Vite, TailwindCSS, Axios
+- **Backend:** Node.js, Express
+- **Database:** MongoDB Atlas
+- **Deployment:** Render
+- **Tools:** dotenv, mongoose, cross-env
+
+## 📦 Installation (Local Dev)
+
+```bash
+# Clone the repo
+git clone https://github.com/Ajinormotor/mern_crud_four.git
+cd mern_crud_four
+
+# Install backend dependencies
+npm install
+
+# Install frontend dependencies
+cd frontend
+npm install
+
+# Go back to root
+cd ..
+
+# Start development
+npm run dev
