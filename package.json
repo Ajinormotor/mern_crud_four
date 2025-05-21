@@ -1,0 +1,26 @@
+{
+  "name": "mern_crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development nodemon backend/server.js",
+    "star": "NODE_ENV=production  node backend/server.js ",
+    "build": "cross-env npm install  && npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongodb": "^6.16.0",
+    "mongoose": "^8.15.0",
+    "nodemon": "^3.1.10"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
