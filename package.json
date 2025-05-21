@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development nodemon backend/server.js",
-    "star": "NODE_ENV=production  node backend/server.js ",
-    "build": "cross-env npm install  && npm install --prefix frontend && npm run build --prefix frontend"
+    "star": "cross-env NODE_ENV=production  node backend/server.js ",
+    "build": " npm install  && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "type": "module",
   "keywords": [],
