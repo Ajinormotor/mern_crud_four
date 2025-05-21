@@ -25,7 +25,7 @@ app.use(express.json())
 //   credentials: true,
 // }));
 
-// app.use(logger);
+app.use(logger);
 
 app.use('/api/users', userRoutes)
 
