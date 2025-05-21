@@ -35,7 +35,7 @@ app.use('/', (req,res,next) => {
     next(error)
 })
 
-app.use(errHandler)
+
 
 if (process.env.NODE_ENV === "production") {
 
@@ -47,6 +47,8 @@ app.get("*", (req,res) => {
 
 
 }
+
+app.use(errHandler)
 
 
 
