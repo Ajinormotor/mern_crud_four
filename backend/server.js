@@ -17,10 +17,14 @@ const PORT = process.env.PORT || 3000
 
 console.log('Mongodb url:', process.env.MONGO_URL)
 app.use(express.json())
+
 app.use(cors({
-    origin:  "http://localhost:5173",
-    credentials: true,
-}))
+  origin: process.env.NODE_ENV === "production"
+    ? "https://mern-crud-four.onrender.com"
+    : "http://localhost:5173",
+  credentials: true,
+}));
+
 app.use(logger);
 
 app.use('/api/users', userRoutes)
