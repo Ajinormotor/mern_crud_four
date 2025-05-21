@@ -18,7 +18,7 @@ A full-stack MERN (MongoDB, Express, React, Node.js) CRUD app deployed on Render
 
 ## 🧰 Tech Stack
 
-- **Frontend:** React, Vite, TailwindCSS, Axios
+- **Frontend:** React, Vite, TailwindCSS, Axios, Schadcn
 - **Backend:** Node.js, Express
 - **Database:** MongoDB Atlas
 - **Deployment:** Render
