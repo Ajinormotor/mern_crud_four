@@ -26,7 +26,7 @@ const [ showCreate, setShowCreate] = useState(false)
 
     <Navbar  showCreate={showCreate} setShowCreate={setShowCreate} />
 
- { showCreate &&   <div className='fixed left-0 top-[250px] md:top-[60px] lg:top-[20px] z-20 
+ { showCreate &&   <div className='fixed left-0 top-[150px]  lg:top-[20px] z-20 
  w-full p-3 md;p-0'>
          <Create  showCreate={showCreate} setShowCreate={setShowCreate}/> 
         </div> }

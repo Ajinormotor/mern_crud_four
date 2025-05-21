@@ -65,14 +65,14 @@ const handleUpdateToggle = (info) => {
 )}
 
     
- { showDelete &&   <div className='fixed left-0 top-[250px] md:top-[120px]
+ { showDelete &&   <div className='fixed left-0 top-[250px] 
   z-20 w-full p-3 md:p-0'>
          <Delete  setShowDelete={setShowDelete}
           singleUser={singleUser} /> 
         </div> }
 
              { showUpdate && 
-               <div className='fixed left-0 top-[250px] md:top-[100px] lg:top-[20px] z-20 w-full p-3 md:p-0'>
+               <div className='fixed left-0 top-[150px] lg:top-[20px] z-20 w-full p-3 md:p-0'>
                  <Update   setShowUpdate={setShowUpdate}  singleUser={singleUser} /> 
                 </div> }
 
