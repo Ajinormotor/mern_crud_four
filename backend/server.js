@@ -19,7 +19,7 @@ console.log('Mongodb url:', process.env.MONGO_URL)
 app.use(express.json())
 app.use(cors({
     origin:  "http://localhost:5173",
-    credentails: true,
+    credentials: true,
 }))
 app.use(logger);
 
@@ -37,9 +37,10 @@ if (process.env.NODE_ENV === "production") {
 
     app.use(express.static(path.join(__dirname, 'frontend', 'dist')))
 
-    app.get("*", (req,res) => {
-        res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"))
-    })
+app.get("*", (req,res) => {
+  res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"))
+})
+
 
 }
 
