@@ -29,17 +29,12 @@ app.use(logger);
 
 app.use('/api/users', userRoutes)
 
-app.use('/', (req,res,next) => {
-    const error = new Error("Route not Found")
-res.status(404)
-    next(error)
-})
 
 
 
 if (process.env.NODE_ENV === "production") {
 
-    app.use(express.static(path.join(__dirname, 'frontend', 'dist')))
+    app.use(express.static(path.join(__dirname, 'frontend', 'dist')));
 
 app.get("*", (req,res) => {
   res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"))
@@ -47,6 +42,14 @@ app.get("*", (req,res) => {
 
 
 }
+
+
+app.use('/', (req,res,next) => {
+    const error = new Error("Route not Found")
+res.status(404)
+    next(error)
+})
+
 
 app.use(errHandler)
 
