@@ -29,11 +29,11 @@ app.use(logger);
 
 app.use('/api/users', userRoutes)
 
-app.use('/', (req,res,next) => {
-    const error = new Error("Route not Found")
-    res.status = 404
-    next(error)
-})
+// app.use('/', (req,res,next) => {
+//     const error = new Error("Route not Found")
+//     res.status = 404
+//     next(error)
+// })
 
 
 
