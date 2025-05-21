@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 3000
 console.log('Mongodb url:', process.env.MONGO_URL)
 app.use(express.json())
 app.use(cors({
-    crigin:  "http://localhost:5173",
+    origin:  "http://localhost:5173",
     credentails: true,
 }))
 app.use(logger);
@@ -33,7 +33,8 @@ app.use('/', (req,res,next) => {
 
 app.use(errHandler)
 
-if(process.env.NODE_ENV=production){
+if (process.env.NODE_ENV === "production") {
+
     app.use(express.static(path.join(__dirname, 'frontend', 'dist')))
 
     app.get("*", (req,res) => {
