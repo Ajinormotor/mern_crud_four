@@ -89,7 +89,7 @@ const handleUpdateToggle = (info) => {
       </TableCaption>
       <TableHeader>
         <TableRow>
-          <TableHead className="w-[60px] hidden md:table-cell text-xs sm:text-sm">
+          <TableHead className="w-[60px] table-cell text-xs sm:text-sm">
             Id
           </TableHead>
           <TableHead className="text-xs sm:text-sm">Name</TableHead>
@@ -104,7 +104,7 @@ const handleUpdateToggle = (info) => {
       <TableBody>
         {users.map((use, index) => (
           <TableRow key={use._id}>
-            <TableCell className="font-medium text-xs sm:text-sm hidden md:table-cell">
+            <TableCell className="font-medium text-xs sm:text-sm md:table-cell">
               {index + 1}
             </TableCell>
             <TableCell className="text-xs sm:text-sm">
