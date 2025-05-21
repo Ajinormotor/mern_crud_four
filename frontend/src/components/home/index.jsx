@@ -13,7 +13,7 @@ const [ showCreate, setShowCreate] = useState(false)
 
 
   return (
-    <div className='min-h-[300px] relative'>
+    <div className='min-h-[300px] relative overflow-hidden w-full 2xl:max-w-[1800px]'>
 
 {showCreate && (
   <div
@@ -21,8 +21,6 @@ const [ showCreate, setShowCreate] = useState(false)
     className="fixed inset-0 left-0 top-0 z-10 bg-opacity-50 backdrop-blur-sm cursor-pointer"
   ></div>
 )}
-
-
 
 
 

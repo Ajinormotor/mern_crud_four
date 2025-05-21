@@ -5,7 +5,7 @@ import { ToastContainer } from "react-toastify"
 
 const HomePage = () => {
   return (
-    <div>
+    <div className='w-full flex items-center justify-center'>
    
       <ToastContainer />
         <HomeIndex />

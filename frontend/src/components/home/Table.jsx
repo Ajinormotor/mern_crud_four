@@ -65,7 +65,8 @@ const handleUpdateToggle = (info) => {
 )}
 
     
- { showDelete &&   <div className='fixed left-0 top-[250px] md:top-[120px] z-20 w-full p-3 md:p-0'>
+ { showDelete &&   <div className='fixed left-0 top-[250px] md:top-[120px]
+  z-20 w-full p-3 md:p-0'>
          <Delete  setShowDelete={setShowDelete}
           singleUser={singleUser} /> 
         </div> }
@@ -75,53 +76,68 @@ const handleUpdateToggle = (info) => {
                  <Update   setShowUpdate={setShowUpdate}  singleUser={singleUser} /> 
                 </div> }
 
+                <div className='flex flex-col gap-5'>
+
+
 <h1 className='font-semibold text-xl text-center'>Seamfix Backend Student List </h1>
 
-        <div className='md:max-w-[900px] w-full'>
-      
-        <Table>
-  <TableCaption>A list of your recent invoices.</TableCaption>
-  <TableHeader>
-    <TableRow>
-      <TableHead className="md:w-[100px]">Id</TableHead>
-      <TableHead  className="text-[12px] md:text-base" >Name</TableHead>
-      <TableHead  className="text-[12px] md:text-base" >Email</TableHead>
-      <TableHead className="text-left  text-[10px] md:text-base">Age</TableHead>
-            <TableHead className="text-left">Created at</TableHead>
-            <TableCell className="text-left font-bold">Actions</TableCell>
-    </TableRow>
-  </TableHeader>
-  
-  <TableBody>
-    {
-  users.map((use,index) => ( 
-    <TableRow key={use._id}>
-
-
- 
-      <TableCell className="font-medium">{index + 1}</TableCell>
-      <TableCell className="text-[10px] md:text-base">{use.firstName} {use.lastName}</TableCell>
-      <TableCell className="text-[10px] md:text-base" >{use.email}</TableCell>
-            <TableCell  className="text-[10px] md:text-base"  > {format(parseISO(use.createdAt), 'dd-MM-yyyy')} </TableCell>
-      <TableCell className="text-left">{use.age}</TableCell>
-            <TableCell className="text-left">
-                <div className='flex items-center gap-2 cursor-pointer'>
-                    <i  onClick={() => handleUpdateToggle(use)}
-                    className="ri-edit-2-fill"></i>
-                    <i  onClick={() => handleDeleteToggle(use)}
-                     className="ri-delete-bin-5-line text-red-500"></i>
-                </div>
+     <div className="w-full max-w-[900px] mx-auto px-2">
+  <div className="overflow-x-auto">
+    <Table>
+      <TableCaption className="text-xs sm:text-sm mb-2">
+       Birlliant backend student
+      </TableCaption>
+      <TableHeader>
+        <TableRow>
+          <TableHead className="w-[60px] hidden md:table-cell text-xs sm:text-sm">
+            Id
+          </TableHead>
+          <TableHead className="text-xs sm:text-sm">Name</TableHead>
+          <TableHead className="text-xs sm:text-sm">Email</TableHead>
+          <TableHead className="text-xs sm:text-sm text-left">Age</TableHead>
+          <TableHead className="text-xs sm:text-sm text-left hidden md:table-cell">
+            Created At
+          </TableHead>
+          <TableHead className="text-xs sm:text-sm text-left">Actions</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {users.map((use, index) => (
+          <TableRow key={use._id}>
+            <TableCell className="font-medium text-xs sm:text-sm hidden md:table-cell">
+              {index + 1}
             </TableCell>
+            <TableCell className="text-xs sm:text-sm">
+              {use.firstName} {use.lastName}
+            </TableCell>
+            <TableCell className="text-xs sm:text-sm">{use.email}</TableCell>
+            <TableCell className="text-xs sm:text-sm">{use.age}</TableCell>
+            <TableCell className="text-xs sm:text-sm hidden md:table-cell">
+              {format(parseISO(use.createdAt), 'dd-MM-yyyy')}
+            </TableCell>
+            <TableCell className="text-left">
+              <div className="flex items-center gap-3 cursor-pointer">
+                <i
+                  onClick={() => handleUpdateToggle(use)}
+                  className="ri-edit-2-fill text-base sm:text-lg hover:text-blue-500"
+                ></i>
+                <i
+                  onClick={() => handleDeleteToggle(use)}
+                  className="ri-delete-bin-5-line text-base sm:text-lg text-red-500 hover:text-red-700"
+                ></i>
+              </div>
+            </TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
+  </div>
+</div>
 
-          
-    </TableRow>
-       ))
-            }
 
-  </TableBody>
-</Table>
-      
-        </div>
+  
+  </div>
+
 
     </div>
   )

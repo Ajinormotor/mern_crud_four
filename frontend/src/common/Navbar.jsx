@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 
 const Navbar = ({showCreate, setShowCreate}) => {
   return (
-    <div className='w-full flex items-center justify-between md:p-5 p-3 bg-black'>
+    <div className='w-full flex items-center justify-between md:p-5 p-3 bg-black max-w-full'>
 
         <div className='flex items-center gap-1'>
             <img src={logo}

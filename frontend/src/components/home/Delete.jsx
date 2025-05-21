@@ -10,7 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { useUserStore } from '../../store/userStore'
-import { toast, ToastContainer} from 'react-toastify'
+import { toast} from 'react-toastify'
 
 
 const Delete = ({singleUser, setShowDelete }) => {
@@ -44,7 +44,6 @@ const Delete = ({singleUser, setShowDelete }) => {
     <div className=' w-full flex items-center justify-center'>
 
          
-            <ToastContainer />
 <div className='max-w-[500px] w-full'>
 
     <Card className="">
