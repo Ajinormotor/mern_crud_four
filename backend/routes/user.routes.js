@@ -6,6 +6,7 @@ import {
   getSingleUser,
   updateUser,
 } from "../controllers/user.controller.js";
+import { authorizeRole, protect } from "../middleware/auth.middleware.js";
 
 const router = express.Router();
 
@@ -19,9 +20,9 @@ router.get("/:id", getSingleUser);
 router.post("/", createUser);
 
 // UpdateUsers
-router.put("/:id", updateUser);
+router.put("/:id", protect, authorizeRole, updateUser);
 
 // Delete Users
-router.delete("/:id", deleteUser);
+router.delete("/:id", protect, authorizeRole, deleteUser);
 
 export default router;
